@@ -23,19 +23,21 @@
       margin-bottom: 3rem;
     }
     .avatar {
-      width: 100px;
-      height: 100px;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       margin: 0 auto 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.5rem;
-      font-weight: bold;
+      object-fit: cover;
+      border: 3px solid #333;
     }
     h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
-    .tagline { color: #888; font-size: 0.95rem; }
+    .tagline { color: #888; font-size: 0.95rem; margin-bottom: 0.5rem; }
+    .blog-link {
+      color: #60a5fa;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .blog-link:hover { text-decoration: underline; }
     h2 {
       font-size: 1.1rem;
       color: #fff;
@@ -53,6 +55,7 @@
     }
     .card h3 { font-size: 1rem; margin-bottom: 0.5rem; color: #fff; }
     .card p { color: #999; font-size: 0.9rem; }
+    .card .achievement { color: #22c55e; font-size: 0.85rem; margin-bottom: 0.5rem; }
     .tag {
       display: inline-block;
       background: #222;
@@ -77,20 +80,6 @@
       transition: all 0.2s;
     }
     .link:hover { background: #252525; border-color: #555; }
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-    }
-    .stat {
-      text-align: center;
-      background: #161616;
-      border: 1px solid #2a2a2a;
-      border-radius: 12px;
-      padding: 1rem;
-    }
-    .stat-num { font-size: 1.5rem; font-weight: bold; color: #fff; }
-    .stat-label { font-size: 0.75rem; color: #666; }
     .footer {
       text-align: center;
       padding-top: 2rem;
@@ -102,32 +91,59 @@
 <body>
   <div class="container">
     <div class="header">
-      <div class="avatar">SK</div>
+      <img src="me.jpg" alt="Sansar Karki" class="avatar">
       <h1>Sansar Karki</h1>
-      <p class="tagline">14 y/o trader & builder</p>
+      <p class="tagline">14 y/o trader, builder & leader</p>
+      <a href="https://theriskysignal.blogspot.com/" target="_blank" class="blog-link">theriskysignal.blogspot.com</a>
     </div>
 
     <section>
       <h2>About</h2>
       <div class="card">
-        <p>Trading since age 9. Currently building a paper trading app and leading a Destination Imagination team. High schooler in NYC area, working toward all A's while building projects and managing a 7-person team.</p>
+        <p>Trading since age 9. Founder of "The Risky Signal" blog sharing market analysis & trading strategies. Currently building a paper trading app and leading a 7-person Destination Imagination team. High schooler in NYC area.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Achievements</h2>
+      <div class="card">
+        <h3>🏆 Destination Imagination</h3>
+        <p class="achievement">1st Place — Massachusetts/Maine Regional Championship</p>
+        <p>Team Leader. Won engineering challenge, placed 13th globally out of 35 teams at Global Finals.</p>
+      </div>
+      <div class="card">
+        <h3>🤖 Robotics — Walter V3</h3>
+        <p class="achievement">AI-Powered Humanoid Robot</p>
+        <p>Independently built an AI humanoid robot with a proprietary personality cloning algorithm. Hardware, software, AI pipeline — all self-engineered. Runs local LLM for natural conversation.</p>
+      </div>
+      <div class="card">
+        <h3>⚽ Soccer</h3>
+        <p class="achievement">Player of the Week — Seacoast United Club (multiple times)</p>
+        <p>Plays Right Wing, Striker, and Left Wing.</p>
+      </div>
+      <div class="card">
+        <h3>📈 Finance & Trading</h3>
+        <p class="achievement">Market-Beating Returns</p>
+        <p>Founder of "The Risky Signal" blog. Runs a trading training group teaching day trading & swing trading. Coached a friend from beginner to profitable trader in 6 months.</p>
+      </div>
+      <div class="card">
+        <h3>🤝 Community Service</h3>
+        <p>Teaches students robotics and basic financial literacy.</p>
       </div>
     </section>
 
     <section>
       <h2>Current Focus</h2>
-      <div class="stats">
-        <div class="stat">
-          <div class="stat-num">DI</div>
-          <div class="stat-label">Team Leader</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">App</div>
-          <div class="stat-label">MVP</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">School</div>
-          <div class="stat-label">Grades ↑</div>
+      <div class="card">
+        <h3>DI Team Leader</h3>
+        <p>Leading 7-person team through final stretch to Global Finals.</p>
+      </div>
+      <div class="card">
+        <h3>Paper Trading App</h3>
+        <p>Building MVP — fantasy football for stocks with friends. Draft, trade, compete.</p>
+        <div style="margin-top: 0.5rem;">
+          <span class="tag">React</span>
+          <span class="tag">MVP</span>
         </div>
       </div>
     </section>
@@ -137,25 +153,25 @@
       <div class="card">
         <h3>Paper Trading App</h3>
         <p>Fantasy football for stocks. Draft, trade, compete with friends. Unique scarcity mechanic.</p>
-        <div style="margin-top: 0.75rem;">
+        <div style="margin-top: 0.5rem;">
           <span class="tag">React</span>
-          <span class="tag">MVP</span>
         </div>
       </div>
       <div class="card">
         <h3>Pre-Earnings IV/HV Dashboard</h3>
         <p>Streamlit app analyzing implied vs historical volatility for earnings plays.</p>
-        <div style="margin-top: 0.75rem;">
+        <div style="margin-top: 0.5rem;">
           <span class="tag">Python</span>
           <span class="tag">yfinance</span>
         </div>
       </div>
-    </section>
-
-    <section>
-      <h2>Goals (90 days)</h2>
       <div class="card">
-        <p>🎯 All grades to A<br>🎯 Finish DI project, place on podium<br>🎯 Rough draft of paper trading app</p>
+        <h3>Walter V3 — AI Robot</h3>
+        <p>Humanoid robot with personality cloning. Local LLM, custom hardware & software.</p>
+        <div style="margin-top: 0.5rem;">
+          <span class="tag">AI/ML</span>
+          <span class="tag">Robotics</span>
+        </div>
       </div>
     </section>
 
@@ -163,13 +179,13 @@
       <h2>Links</h2>
       <div class="links">
         <a class="link" href="https://github.com/Sansar-Karki">GitHub</a>
+        <a class="link" href="https://theriskysignal.blogspot.com/">The Risky Signal</a>
         <a class="link" href="https://sansar-karki.github.io/TradeCheck">TradeCheck</a>
-        <a class="link" href="#">Discord: sansar_36832</a>
       </div>
     </section>
 
     <div class="footer">
-      <p>Built during February break 🎉</p>
+      <p>14 y/o building things 🎉</p>
     </div>
   </div>
 </body>
