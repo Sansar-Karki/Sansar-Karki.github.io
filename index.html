@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sansar Karki</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .avatar {
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 50%;
+      margin: 0 auto 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+    h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+    .tagline { color: #888; font-size: 0.95rem; }
+    h2 {
+      font-size: 1.1rem;
+      color: #fff;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #333;
+    }
+    section { margin-bottom: 2.5rem; }
+    .card {
+      background: #161616;
+      border: 1px solid #2a2a2a;
+      border-radius: 12px;
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .card h3 { font-size: 1rem; margin-bottom: 0.5rem; color: #fff; }
+    .card p { color: #999; font-size: 0.9rem; }
+    .tag {
+      display: inline-block;
+      background: #222;
+      border: 1px solid #333;
+      padding: 0.25rem 0.6rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      margin-right: 0.4rem;
+      margin-bottom: 0.4rem;
+      color: #aaa;
+    }
+    .links { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .link {
+      display: inline-block;
+      background: #1a1a1a;
+      border: 1px solid #333;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      color: #ccc;
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: all 0.2s;
+    }
+    .link:hover { background: #252525; border-color: #555; }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+    .stat {
+      text-align: center;
+      background: #161616;
+      border: 1px solid #2a2a2a;
+      border-radius: 12px;
+      padding: 1rem;
+    }
+    .stat-num { font-size: 1.5rem; font-weight: bold; color: #fff; }
+    .stat-label { font-size: 0.75rem; color: #666; }
+    .footer {
+      text-align: center;
+      padding-top: 2rem;
+      color: #555;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="avatar">SK</div>
+      <h1>Sansar Karki</h1>
+      <p class="tagline">14 y/o trader & builder</p>
+    </div>
+
+    <section>
+      <h2>About</h2>
+      <div class="card">
+        <p>Trading since age 9. Currently building a paper trading app and leading a Destination Imagination team. High schooler in NYC area, working toward all A's while building projects and managing a 7-person team.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Current Focus</h2>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-num">DI</div>
+          <div class="stat-label">Team Leader</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">App</div>
+          <div class="stat-label">MVP</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">School</div>
+          <div class="stat-label">Grades ↑</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <div class="card">
+        <h3>Paper Trading App</h3>
+        <p>Fantasy football for stocks. Draft, trade, compete with friends. Unique scarcity mechanic.</p>
+        <div style="margin-top: 0.75rem;">
+          <span class="tag">React</span>
+          <span class="tag">MVP</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Pre-Earnings IV/HV Dashboard</h3>
+        <p>Streamlit app analyzing implied vs historical volatility for earnings plays.</p>
+        <div style="margin-top: 0.75rem;">
+          <span class="tag">Python</span>
+          <span class="tag">yfinance</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Goals (90 days)</h2>
+      <div class="card">
+        <p>🎯 All grades to A<br>🎯 Finish DI project, place on podium<br>🎯 Rough draft of paper trading app</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Links</h2>
+      <div class="links">
+        <a class="link" href="https://github.com/Sansar-Karki">GitHub</a>
+        <a class="link" href="https://sansar-karki.github.io/TradeCheck">TradeCheck</a>
+        <a class="link" href="#">Discord: sansar_36832</a>
+      </div>
+    </section>
+
+    <div class="footer">
+      <p>Built during February break 🎉</p>
+    </div>
+  </div>
+</body>
+</html>
