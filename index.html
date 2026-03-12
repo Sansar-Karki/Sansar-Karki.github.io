@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sansar Karki</title>
+  <title>Sansar Karki | Automation Consultant</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -28,16 +28,20 @@
       border-radius: 50%;
       margin: 0 auto 1rem;
       object-fit: cover;
-      border: 3px solid #333;
+      border: 3px solid #22c55e;
     }
     h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
-    .tagline { color: #888; font-size: 0.95rem; margin-bottom: 0.5rem; }
-    .blog-link {
-      color: #60a5fa;
-      text-decoration: none;
-      font-size: 0.9rem;
+    .tagline { color: #22c55e; font-size: 0.95rem; margin-bottom: 0.5rem; font-weight: 500; }
+    .availability {
+      display: inline-block;
+      background: #22c55e20;
+      border: 1px solid #22c55e;
+      color: #22c55e;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      margin-top: 0.5rem;
     }
-    .blog-link:hover { text-decoration: underline; }
     h2 {
       font-size: 1.1rem;
       color: #fff;
@@ -55,7 +59,7 @@
     }
     .card h3 { font-size: 1rem; margin-bottom: 0.5rem; color: #fff; }
     .card p { color: #999; font-size: 0.9rem; }
-    .card .achievement { color: #22c55e; font-size: 0.85rem; margin-bottom: 0.5rem; }
+    .card .highlight { color: #22c55e; font-size: 0.85rem; margin-bottom: 0.5rem; }
     .tag {
       display: inline-block;
       background: #222;
@@ -79,7 +83,29 @@
       font-size: 0.85rem;
       transition: all 0.2s;
     }
-    .link:hover { background: #252525; border-color: #555; }
+    .link:hover { background: #252525; border-color: #22c55e; }
+    .services-grid {
+      display: grid;
+      gap: 1rem;
+    }
+    .service-icon { font-size: 1.5rem; margin-right: 0.5rem; }
+    .cta {
+      background: linear-gradient(135deg, #22c55e10, #16a34010);
+      border: 1px solid #22c55e;
+      text-align: center;
+    }
+    .cta p { color: #ccc; margin-bottom: 1rem; }
+    .cta-button {
+      display: inline-block;
+      background: #22c55e;
+      color: #0a0a0a;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .cta-button:hover { background: #16a340; transform: translateY(-2px); }
     .footer {
       text-align: center;
       padding-top: 2rem;
@@ -93,85 +119,107 @@
     <div class="header">
       <img src="me.jpg" alt="Sansar Karki" class="avatar">
       <h1>Sansar Karki</h1>
-      <p class="tagline">14-year-old trader, builder & leader</p>
-      <a href="https://theriskysignal.blogspot.com/" target="_blank" class="blog-link">theriskysignal.blogspot.com</a>
+      <p class="tagline">🤖 Automation Consultant</p>
+      <p style="color: #666; font-size: 0.9rem;">Building smart systems that work for you</p>
+      <span class="availability">✅ Available for Projects</span>
     </div>
 
     <section>
       <h2>About</h2>
       <div class="card">
-        <p>Trading since age 9. Founder of "The Risky Signal" blog sharing market analysis & trading strategies. Building a paper trading app and leading a 7-person Destination Imagination team. Middle schooler in Greater Boston area.</p>
+        <p>I build automation solutions that save time and reduce repetitive work. From workflow scripts to AI-powered systems, I turn manual processes into efficient, automated workflows. Background in robotics, financial systems, and full-stack development.</p>
       </div>
     </section>
 
     <section>
-      <h2>Achievements</h2>
-      <div class="card">
-        <h3>🏆 Destination Imagination</h3>
-        <p class="achievement">🏅 CHAMPIONS — Massachusetts/Maine Regional Championship</p>
-        <p>Team Leader. Dominated the engineering challenge, took 1st place, then represented the region at Global Finals against 35 teams worldwide — finishing an incredible 13th globally.</p>
-      </div>
-      <div class="card">
-        <h3>🤖 Robotics — Walter V3</h3>
-        <p class="achievement">🚀 Fully Autonomous AI Humanoid Robot</p>
-        <p>Independently engineered an AI-powered humanoid robot featuring a proprietary personality cloning algorithm. Designed the hardware from scratch, built the entire software stack, created a custom AI pipeline, and implemented local LLM inference for natural conversation.</p>
-      </div>
-      <div class="card">
-        <h3>⚽ Soccer</h3>
-        <p class="achievement">⭐ Player of the Week — Seacoast United Club (multiple times)</p>
-        <p>Elite-level play as Right Wing, Striker, and Left Wing. Recognized multiple times for outstanding performance.</p>
-      </div>
-      <div class="card">
-        <h3>📈 Finance & Trading</h3>
-        <p class="achievement">📊 Consistently Outperforming the Market</p>
-        <p>Founder of "The Risky Signal" — a widely followed blog delivering expert market analysis, technical setups, and trading strategies across options, crypto, stocks, and futures. Leads a premium trading training group and personally mentored a complete beginner into a profitable trader in just 6 months.</p>
-      </div>
-      <div class="card">
-        <h3>🤝 Community Service</h3>
-        <p>Teaches students robotics and basic financial literacy.</p>
-      </div>
-    </section>
-
-    <section>
-      <h2>Current Focus</h2>
-      <div class="card">
-        <h3>DI Team Leader</h3>
-        <p>Leading 7-person team through final stretch to Global Finals.</p>
-      </div>
-      <div class="card">
-        <h3>Paper Trading App</h3>
-        <p>Building MVP — fantasy football for stocks with friends. Draft, trade, compete.</p>
-        <div style="margin-top: 0.5rem;">
-          <span class="tag">React</span>
-          <span class="tag">MVP</span>
+      <h2>Services</h2>
+      <div class="services-grid">
+        <div class="card">
+          <h3><span class="service-icon">🔄</span>Workflow Automation</h3>
+          <p>Automate repetitive tasks, streamline business processes, and eliminate manual data entry with custom scripts and integrations.</p>
+        </div>
+        <div class="card">
+          <h3><span class="service-icon">🔗</span>API Integrations</h3>
+          <p>Connect your favorite tools together. Build bridges between platforms that don't natively talk to each other.</p>
+        </div>
+        <div class="card">
+          <h3><span class="service-icon">🤖</span>Bot Development</h3>
+          <p>Discord bots, trading bots, chatbots — intelligent automation that handles tasks 24/7 so you don't have to.</p>
+        </div>
+        <div class="card">
+          <h3><span class="service-icon">📊</span>Data & Analytics</h3>
+          <p>Automated reporting, dashboard building, and data pipelines that keep your business insights flowing.</p>
         </div>
       </div>
     </section>
 
     <section>
-      <h2>Projects</h2>
+      <h2>Selected Projects</h2>
       <div class="card">
-        <h3>Paper Trading App</h3>
-        <p>Fantasy football for stocks. Unique scarcity mechanic — once you sell to the open market, it's gone forever.</p>
+        <h3>Walter V3 — AI Humanoid Robot</h3>
+        <p class="highlight">🚀 Fully Autonomous System</p>
+        <p>Built a complete AI-powered humanoid robot from scratch. Custom hardware design, personality cloning algorithm, local LLM inference, and natural conversation capabilities.</p>
         <div style="margin-top: 0.5rem;">
-          <span class="tag">React</span>
+          <span class="tag">Python</span>
+          <span class="tag">AI/ML</span>
+          <span class="tag">Robotics</span>
+          <span class="tag">Edge Computing</span>
         </div>
       </div>
       <div class="card">
-        <h3>Pre-Earnings IV/HV Dashboard</h3>
-        <p>Streamlit app analyzing implied vs historical volatility for earnings plays.</p>
+        <h3>Paper Trading Platform</h3>
+        <p class="highlight">💹 Fantasy Stock Trading App</p>
+        <p>Full-stack trading platform with real-time data, portfolio management, and unique scarcity mechanics.</p>
         <div style="margin-top: 0.5rem;">
+          <span class="tag">React</span>
           <span class="tag">Python</span>
           <span class="tag">yfinance</span>
         </div>
       </div>
       <div class="card">
-        <h3>Walter V3 — AI Robot</h3>
-        <p>Humanoid robot with personality cloning. Local LLM, custom hardware & software.</p>
+        <h3>Pre-Earnings IV/HV Dashboard</h3>
+        <p class="highlight">📈 Volatility Analysis Tool</p>
+        <p>Automated analysis of implied vs historical volatility for earnings plays. Real-time data processing and visualization.</p>
         <div style="margin-top: 0.5rem;">
-          <span class="tag">AI/ML</span>
-          <span class="tag">Robotics</span>
+          <span class="tag">Python</span>
+          <span class="tag">Streamlit</span>
+          <span class="tag">Data Science</span>
         </div>
+      </div>
+      <div class="card">
+        <h3>ClipGen — AI Video Clip Generator</h3>
+        <p class="highlight">🎬 YouTube Automation Tool</p>
+        <p>Automated detection of highlight moments in YouTube videos using AI. Downloads and generates clips automatically.</p>
+        <div style="margin-top: 0.5rem;">
+          <span class="tag">Python</span>
+          <span class="tag">AI/ML</span>
+          <span class="tag">Automation</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Skills & Tech</h2>
+      <div class="card">
+        <div style="margin-top: 0.5rem;">
+          <span class="tag">Python</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">React</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">API Development</span>
+          <span class="tag">AI/ML</span>
+          <span class="tag">Automation Scripts</span>
+          <span class="tag">Discord Bots</span>
+          <span class="tag">Data Analysis</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="card cta">
+        <h3>Let's Automate Something</h3>
+        <p>Have a repetitive task that eats your time? I build solutions.</p>
+        <a href="mailto:sansar.karki@gmail.com" class="cta-button">Get in Touch</a>
       </div>
     </section>
 
@@ -181,11 +229,12 @@
         <a class="link" href="https://github.com/Sansar-Karki">GitHub</a>
         <a class="link" href="https://theriskysignal.blogspot.com/">The Risky Signal</a>
         <a class="link" href="https://sansar-karki.github.io/TradeCheck">TradeCheck</a>
+        <a class="link" href="https://sansar-karki.github.io/clipgen">ClipGen</a>
       </div>
     </section>
 
     <div class="footer">
-      <p>14-year-old building apps 🎉</p>
+      <p>Automation Consultant based in Greater Boston</p>
     </div>
   </div>
 </body>
