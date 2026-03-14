@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sansar Karki | Automation Consultant</title>
+  <title>Sansar Karki | Automation Engineer</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -20,7 +20,7 @@
     }
     .header {
       text-align: center;
-      margin-bottom: 3rem;
+      margin-bottom: 2.5rem;
     }
     .avatar {
       width: 120px;
@@ -30,26 +30,10 @@
       object-fit: cover;
       border: 3px solid #22c55e;
     }
-    h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
-    .tagline { color: #22c55e; font-size: 0.95rem; margin-bottom: 0.5rem; font-weight: 500; }
-    .availability {
-      display: inline-block;
-      background: #22c55e20;
-      border: 1px solid #22c55e;
-      color: #22c55e;
-      padding: 0.25rem 0.75rem;
-      border-radius: 20px;
-      font-size: 0.8rem;
-      margin-top: 0.5rem;
-    }
-    h2 {
-      font-size: 1.1rem;
-      color: #fff;
-      margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid #333;
-    }
-    section { margin-bottom: 2.5rem; }
+    h1 { font-size: 1.75rem; margin-bottom: 0.25rem; }
+    .verified { color: #22c55e; }
+    h2 { font-size: 1rem; color: #888; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+    section { margin-bottom: 2rem; }
     .card {
       background: #161616;
       border: 1px solid #2a2a2a;
@@ -57,44 +41,33 @@
       padding: 1.25rem;
       margin-bottom: 1rem;
     }
-    .card h3 { font-size: 1rem; margin-bottom: 0.5rem; color: #fff; }
+    .card h3 { font-size: 1rem; margin-bottom: 0.25rem; color: #fff; }
     .card p { color: #999; font-size: 0.9rem; }
-    .card .highlight { color: #22c55e; font-size: 0.85rem; margin-bottom: 0.5rem; }
+    .card .meta { color: #666; font-size: 0.8rem; margin-bottom: 0.5rem; }
     .tag {
       display: inline-block;
       background: #222;
       border: 1px solid #333;
-      padding: 0.25rem 0.6rem;
+      padding: 0.2rem 0.5rem;
       border-radius: 20px;
-      font-size: 0.75rem;
-      margin-right: 0.4rem;
-      margin-bottom: 0.4rem;
+      font-size: 0.7rem;
+      margin-right: 0.3rem;
+      margin-bottom: 0.3rem;
       color: #aaa;
     }
-    .links { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
     .link {
       display: inline-block;
       background: #1a1a1a;
       border: 1px solid #333;
-      padding: 0.6rem 1rem;
+      padding: 0.5rem 0.75rem;
       border-radius: 8px;
       color: #ccc;
       text-decoration: none;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       transition: all 0.2s;
     }
     .link:hover { background: #252525; border-color: #22c55e; }
-    .services-grid {
-      display: grid;
-      gap: 1rem;
-    }
-    .service-icon { font-size: 1.5rem; margin-right: 0.5rem; }
-    .cta {
-      background: linear-gradient(135deg, #22c55e10, #16a34010);
-      border: 1px solid #22c55e;
-      text-align: center;
-    }
-    .cta p { color: #ccc; margin-bottom: 1rem; }
     .cta-button {
       display: inline-block;
       background: #22c55e;
@@ -103,280 +76,86 @@
       border-radius: 8px;
       text-decoration: none;
       font-weight: 600;
-      transition: all 0.2s;
+      font-size: 0.9rem;
     }
-    .cta-button:hover { background: #16a340; transform: translateY(-2px); }
     .footer {
       text-align: center;
       padding-top: 2rem;
       color: #555;
       font-size: 0.8rem;
     }
-    .pricing-grid {
-      display: grid;
-      gap: 1rem;
-    }
-    .pricing-card {
-      background: #161616;
-      border: 1px solid #2a2a2a;
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-    .pricing-card.featured {
-      border-color: #22c55e;
-      background: linear-gradient(135deg, #22c55e10, #161616);
-    }
-    .pricing-card .tier { color: #888; font-size: 0.85rem; margin-bottom: 0.5rem; }
-    .pricing-card .price { font-size: 2rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; }
-    .pricing-card .price span { font-size: 1rem; color: #666; font-weight: 400; }
-    .pricing-card ul { list-style: none; text-align: left; margin: 1rem 0; }
-    .pricing-card li { color: #999; font-size: 0.9rem; padding: 0.4rem 0; }
-    .pricing-card li::before { content: "✓"; color: #22c55e; margin-right: 0.5rem; }
-    .pricing-card .note { color: #666; font-size: 0.8rem; margin-top: 1rem; }
-    .process-grid {
-      display: grid;
-      gap: 1rem;
-    }
-    .process-step {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-    }
-    .step-number {
-      width: 36px;
-      height: 36px;
-      background: #22c55e;
-      color: #0a0a0a;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-    .step-content h3 { margin-bottom: 0.25rem; color: #fff; font-size: 1rem; }
-    .step-content p { color: #999; font-size: 0.9rem; }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="header">
       <img src="me.jpg" alt="Sansar Karki" class="avatar">
-      <h1>Sansar Karki ✓</h1>
-      <p class="tagline">🤖 Automation Engineer & Founder of Andover Digital</p>
-      <p style="color: #666; font-size: 0.9rem;">Andover, Massachusetts &middot; Contact info</p>
-      <span class="availability">✅ Available for Projects</span>
+      <h1>Sansar Karki <span class="verified">✓</span></h1>
+      <p style="color: #22c55e; font-size: 0.95rem;">Automation Engineer & Founder, Andover Digital</p>
+      <p style="color: #666; font-size: 0.85rem; margin-top: 0.5rem;">Andover, MA · 7th Grade · Values Ambassador</p>
     </div>
 
     <section>
-      <h2>About</h2>
       <div class="card">
-        <p>I build automation systems that remove repetitive work and connect software together. My focus is designing practical tools such as workflow automations, AI-powered systems, and custom API integrations that allow businesses to operate more efficiently.</p>
-        <p style="margin-top: 1rem;">Currently building automation systems through Andover Digital.</p>
+        <p>14-year-old builder obsessed with AI, robotics, and automation. I build systems that remove repetitive work and connect software together.</p>
+        <p style="margin-top: 0.75rem;">Through <strong>Andover Digital</strong>, I help local businesses automate follow-ups, capture leads, and streamline customer communication.</p>
+        <p style="margin-top: 0.75rem;">Also a 3x Student of the Month and Values Ambassador at Doherty Middle School.</p>
       </div>
     </section>
 
     <section>
-      <h2>Services</h2>
-      <div class="services-grid">
-        <div class="card">
-          <h3><span class="service-icon">🔄</span>Workflow Automation</h3>
-          <p>Automate repetitive tasks, streamline business processes, and eliminate manual data entry with custom scripts and integrations.</p>
-        </div>
-        <div class="card">
-          <h3><span class="service-icon">🔗</span>API Integrations</h3>
-          <p>Connect your favorite tools together. Build bridges between platforms that don't natively talk to each other.</p>
-        </div>
-        <div class="card">
-          <h3><span class="service-icon">🤖</span>Bot Development</h3>
-          <p>Discord bots, trading bots, chatbots — intelligent automation that handles tasks 24/7 so you don't have to.</p>
-        </div>
-        <div class="card">
-          <h3><span class="service-icon">📊</span>Data & Analytics</h3>
-          <p>Automated reporting, dashboard building, and data pipelines that keep your business insights flowing.</p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Experience</h2>
-      <div class="card">
-        <h3>Founder and CEO — Andover Digital</h3>
-        <p class="highlight">Sep 2025 - Present</p>
-        <p>AI automation and digital systems agency helping local businesses capture more leads, automate follow-ups, and streamline customer communication. Specializes in AI-powered lead capture, automated email/CRM workflows, business websites, booking pipelines, and outbound lead generation.</p>
-      </div>
-    </section>
-
-    <section>
-      <h2>Education</h2>
-      <div class="card">
-        <h3>Doherty Middle School</h3>
-        <p class="highlight">Aug 2023 - Jul 2026</p>
-        <p>7th Grade Values Ambassador<br>Student of the Month (3×)</p>
-      </div>
-    </section>
-
-    <section>
-      <h2>How I Work</h2>
-      <div class="process-grid">
-        <div class="card process-step">
-          <div class="step-number">1</div>
-          <div class="step-content">
-            <h3>Discovery Call</h3>
-            <p>We discuss your pain points, goals, and what repetitive tasks are eating your time.</p>
-          </div>
-        </div>
-        <div class="card process-step">
-          <div class="step-number">2</div>
-          <div class="step-content">
-            <h3>Solution Design</h3>
-            <p>I propose a technical approach with timeline and pricing. You approve, we move forward.</p>
-          </div>
-        </div>
-        <div class="card process-step">
-          <div class="step-number">3</div>
-          <div class="step-content">
-            <h3>Build & Test</h3>
-            <p>I develop the automation, keeping you updated with progress and demos along the way.</p>
-          </div>
-        </div>
-        <div class="card process-step">
-          <div class="step-number">4</div>
-          <div class="step-content">
-            <h3>Delivery & Support</h3>
-            <p>Final handover with documentation. I'm available for tweaks and ongoing support.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Pricing</h2>
-      <div class="pricing-grid">
-        <div class="pricing-card">
-          <div class="tier">Quick Fix</div>
-          <div class="price">$50<span>/project</span></div>
-          <ul>
-            <li>Small script or automation</li>
-            <li>1-2 hour scope</li>
-            <li>Same-day delivery</li>
-            <li>Basic documentation</li>
-          </ul>
-          <div class="note">Perfect for one-off tasks</div>
-        </div>
-        <div class="pricing-card featured">
-          <div class="tier">✨ Standard Project</div>
-          <div class="price">$150<span>/project</span></div>
-          <ul>
-            <li>Workflow automation</li>
-            <li>5-15 hour scope</li>
-            <li>3-7 day delivery</li>
-            <li>Full documentation</li>
-            <li>2 weeks of minor tweaks</li>
-          </ul>
-          <div class="note">Most popular choice</div>
-        </div>
-        <div class="pricing-card">
-          <div class="tier">Retainer</div>
-          <div class="price">$300<span>/month</span></div>
-          <ul>
-            <li>Ongoing automation work</li>
-            <li>Priority turnaround</li>
-            <li>Unlimited small tasks</li>
-            <li>Monthly strategy calls</li>
-            <li>Continuous improvements</li>
-          </ul>
-          <div class="note">For ongoing needs</div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Selected Projects</h2>
+      <h2>Projects</h2>
       <div class="card">
         <h3>Walter V3 — AI Humanoid Robot</h3>
-        <p class="highlight">🚀 Fully Autonomous System</p>
-        <p>Built a complete AI-powered humanoid robot from scratch. Custom hardware design, personality cloning algorithm, local LLM inference, and natural conversation capabilities.</p>
-        <div style="margin-top: 0.5rem;">
-          <span class="tag">Python</span>
-          <span class="tag">AI/ML</span>
-          <span class="tag">Robotics</span>
-          <span class="tag">Edge Computing</span>
-        </div>
+        <p class="meta">Autonomous robot with local LLM inference</p>
+        <span class="tag">Python</span><span class="tag">AI/ML</span><span class="tag">Robotics</span>
       </div>
       <div class="card">
         <h3>Paper Trading Platform</h3>
-        <p class="highlight">💹 Fantasy Stock Trading App</p>
-        <p>Full-stack trading platform with real-time data, portfolio management, and unique scarcity mechanics.</p>
-        <div style="margin-top: 0.5rem;">
-          <span class="tag">React</span>
-          <span class="tag">Python</span>
-          <span class="tag">yfinance</span>
-        </div>
+        <p class="meta">Fantasy stock trading with scarcity mechanics</p>
+        <span class="tag">React</span><span class="tag">Python</span>
+      </div>
+      <div class="card">
+        <h3>ClipGen</h3>
+        <p class="meta">AI that auto-generates YouTube highlight clips</p>
+        <span class="tag">Python</span><span class="tag">AI/ML</span>
       </div>
       <div class="card">
         <h3>Pre-Earnings IV/HV Dashboard</h3>
-        <p class="highlight">📈 Volatility Analysis Tool</p>
-        <p>Automated analysis of implied vs historical volatility for earnings plays. Real-time data processing and visualization.</p>
-        <div style="margin-top: 0.5rem;">
-          <span class="tag">Python</span>
-          <span class="tag">Streamlit</span>
-          <span class="tag">Data Science</span>
-        </div>
-      </div>
-      <div class="card">
-        <h3>ClipGen — AI Video Clip Generator</h3>
-        <p class="highlight">🎬 YouTube Automation Tool</p>
-        <p>Automated detection of highlight moments in YouTube videos using AI. Downloads and generates clips automatically.</p>
-        <div style="margin-top: 0.5rem;">
-          <span class="tag">Python</span>
-          <span class="tag">AI/ML</span>
-          <span class="tag">Automation</span>
-        </div>
+        <p class="meta">Volatility analysis for earnings trading</p>
+        <span class="tag">Python</span><span class="tag">Streamlit</span>
       </div>
     </section>
 
     <section>
-      <h2>Skills & Tech</h2>
+      <h2>Skills</h2>
       <div class="card">
-        <div style="margin-top: 0.5rem;">
-          <span class="tag">Python</span>
-          <span class="tag">Leadership</span>
-          <span class="tag">Artificial Intelligence (AI)</span>
-          <span class="tag">Machine Learning</span>
-          <span class="tag">Streamlit</span>
-          <span class="tag">Data Analysis</span>
-          <span class="tag">n8n</span>
-          <span class="tag">Web Automation</span>
-          <span class="tag">React</span>
-          <span class="tag">Node.js</span>
-        </div>
+        <span class="tag">Python</span>
+        <span class="tag">AI/ML</span>
+        <span class="tag">Machine Learning</span>
+        <span class="tag">Streamlit</span>
+        <span class="tag">n8n</span>
+        <span class="tag">React</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">Data Analysis</span>
+        <span class="tag">Web Automation</span>
       </div>
     </section>
 
     <section>
-      <div class="card cta">
-        <h3>Let's Automate Something</h3>
-        <p>Have a repetitive task that eats your time? I build solutions.</p>
+      <h2>Connect</h2>
+      <div class="links">
+        <a class="link" href="https://www.linkedin.com/in/sansar-karki">LinkedIn</a>
+        <a class="link" href="https://github.com/Sansar-Karki">GitHub</a>
+        <a class="link" href="https://theriskysignal.blogspot.com/">Blog</a>
+      </div>
+      <div style="margin-top: 1rem;">
         <a href="mailto:sansar.karki@gmail.com" class="cta-button">Get in Touch</a>
       </div>
     </section>
 
-    <section>
-      <h2>Links</h2>
-      <div class="links">
-        <a class="link" href="https://www.linkedin.com/in/sansar-karki">LinkedIn</a>
-        <a class="link" href="https://github.com/Sansar-Karki">GitHub</a>
-        <a class="link" href="https://theriskysignal.blogspot.com/">The Risky Signal</a>
-        <a class="link" href="https://sansar-karki.github.io/TradeCheck">TradeCheck</a>
-        <a class="link" href="https://sansar-karki.github.io/clipgen">ClipGen</a>
-      </div>
-    </section>
-
     <div class="footer">
-      <p>Andover, Massachusetts, United States</p>
+      <p>Andover, Massachusetts</p>
     </div>
   </div>
 </body>
